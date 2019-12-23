@@ -10,10 +10,10 @@ console.log(arr[5]);
 
 //배열의 원소로 객체를 사용하기
 const object = [{
-        name: '멍멍이'
+        name: '멍멍이', age: 17, S: '수컷'
     },
     {
-        name: '개'
+        name: '개', age: 14, S: '암컷'
     }
 ];
 
@@ -65,10 +65,12 @@ const items = [{
 ];
 
 const texts = items.map(item => item.text);
+const id = items.map(item => item.id);
 console.log(texts);
+console.log(id);
 
 //특정 원소의 위치 검색하기
-const foods = ['짜장면', '짬뽕', '볶음밥', '탕수육'];
+const foods = ['볶음밥', '짬뽕', '볶음밥', '탕수육'];
 const index = foods.indexOf('볶음밥');
 console.log(index);
 
@@ -84,7 +86,7 @@ const todos = [{
         done: true
     },
     {
-        id: 3,
+        id: 'abc',
         text: '객체와 배열 배우기',
         done: true
     },
@@ -95,7 +97,7 @@ const todos = [{
     }
 ]
 
-const obejct_index = todos.findIndex(todo => todo.id === 3);
+const obejct_index = todos.findIndex(todo => todo.id === 4);
 const obejct = todos.find(todos => todos.id === 1);
 console.log(obejct_index);
 console.log(obejct);
